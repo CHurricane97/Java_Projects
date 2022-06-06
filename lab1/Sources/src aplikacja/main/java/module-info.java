@@ -1,0 +1,4 @@
+module aplikacja {
+
+    requires biblioteka;
+}
