@@ -1,0 +1,52 @@
+
+CREATE TABLE "Event" (
+  "Event ID" SERIAL,
+  "Name" VARCHAR(100) not null,
+  "Place" VARCHAR(100) not null,
+  "Date" DATE not null,
+  PRIMARY KEY ("Event ID")
+);
+
+CREATE TABLE "Person" (
+  "Person ID" SERIAL,
+  "Name" VARCHAR(100) not null,
+  "Surname" VARCHAR(100) not null,
+  PRIMARY KEY ("Person ID")
+);
+
+
+CREATE TABLE "Installment" (
+  "Installment ID" SERIAL,
+  "Event ID" Integer not null,
+  "Installment Number" Integer not null,
+  "Due Date" DATE not null,
+  "Installment Amount" numeric(10,2)not null,
+  PRIMARY KEY ("Installment ID"),
+  CONSTRAINT "FK_Installment.Event ID"
+    FOREIGN KEY ("Event ID")
+      REFERENCES "Event"("Event ID")
+	          on update restrict
+        on delete cascade
+);
+
+
+CREATE TABLE "Payment" (
+  "Payment ID" SERIAL,
+  "Payment Date" DATE not null,
+  "Payment Amount" numeric(10,2)not null,
+  "Person ID" Integer not null,
+  "Event ID" Integer not null,
+  "Installment Number" Integer not null,
+  PRIMARY KEY ("Payment ID"),
+  CONSTRAINT "FK_Payment.Person ID"
+    FOREIGN KEY ("Person ID")
+      REFERENCES "Person"("Person ID")
+	          on update restrict
+        on delete cascade,
+  CONSTRAINT "FK_Payment.Event ID"
+    FOREIGN KEY ("Event ID")
+      REFERENCES "Event"("Event ID")
+	          on update restrict
+        on delete cascade
+);
+
