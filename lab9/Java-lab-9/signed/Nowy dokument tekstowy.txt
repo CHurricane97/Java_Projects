@@ -1,0 +1,4 @@
+jarsigner -verify signedApplication.jar
+jarsigner -verify signedLibrary.jar
+jarsigner -verify Aplikacja.jar
+jarsigner -verify Biblioteka.jar

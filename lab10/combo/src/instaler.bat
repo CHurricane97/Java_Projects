@@ -1,0 +1,1 @@
+jpackage -i . --name MultiversionAplication --main-class MainWindow --main-jar Multiversion.jar --win-shortcut --win-menu 

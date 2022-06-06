@@ -1,0 +1,1 @@
+java -p "C:\Users\barsu\Desktop\Jars\signed\signedApplication.jar;C:\Users\barsu\Desktop\Jars\signed\signedLibrary.jar" -m ApplicationCrypto/application.MainWindow
