@@ -1,0 +1,5 @@
+Aplikacja Modulowa:
+java.exe -p D:\Java-lab5\app-m\client\target\client-2.0-SNAPSHOT.jar;D:\Java-lab5\app-m\api\target\api-2.0-SNAPSHOT.jar;D:\Java-lab5\app-m\impl1\target\impl1-2.0-SNAPSHOT.jar;D:\Java-lab5\app-m\impl2\target\impl2-2.0-SNAPSHOT.jar -m client/service.loader.Main
+
+Aplikacja Standardowa:
+java.exe -classpath D:\Java-lab5\app\client\target\client-2.0-SNAPSHOT.jar;D:\Java-lab5\app\api\target\api-2.0-SNAPSHOT.jar;D:\Java-lab5\app\impl1\target\impl1-2.0-SNAPSHOT.jar;D:\Java-lab5\app\impl2\target\impl2-2.0-SNAPSHOT.jar service.loader.Main

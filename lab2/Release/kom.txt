@@ -1,9 +1,0 @@
-java -jar Lab2.jar
-java -jar -Xms512m -Xmx1024m Lab2.jar
-java -jar -Xms256m -Xmx512m Lab2.jar
-java -jar -Xms128m -Xmx256m Lab2.jar 
-java -jar -Xms256m -Xmx512m -XX:+ShrinkHeapInSteps Lab2.jar
-java -jar -Xms256m -Xmx512m -XX:-ShrinkHeapInSteps Lab2.jar
-java -jar -Xms256m -Xmx512m -XX:+UseSerialGC Lab2.jar
-java -jar -Xms256m -Xmx512m -XX:+UseParallelGC Lab2.jar
-java -jar -Xms256m -Xmx512m -XX:+UseG1GC Lab2.jar
